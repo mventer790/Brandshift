@@ -57,13 +57,15 @@ export default function AboutSection() {
               <span className="text-blue-500">Not Excuses.</span>
             </h2>
             <p className="text-slate-500 text-[16px] sm:text-[17px] leading-relaxed mb-5">
-              Brandshift was founded on one belief: most businesses have great services but broken acquisition.
-              They&apos;re invisible online, their websites don&apos;t convert, and leads fall through the cracks.
+              Brand Shift Online is a South African digital agency specializing in hands-free lead generation systems
+              for businesses locally and worldwide. We help companies grow through high-converting websites,
+              Meta &amp; Google Ads, social media management, ecommerce development, AI-powered systems,
+              and digital strategy.
             </p>
             <p className="text-slate-500 text-[16px] sm:text-[17px] leading-relaxed mb-10">
-              We fix that — completely. We&apos;re not freelancers taking orders or account managers sending reports.
-              We&apos;re a team of growth engineers who take ownership of your entire digital acquisition system
-              and don&apos;t stop until it performs.
+              Our approach is built around proven industry blueprints designed to attract attention, build trust,
+              and convert leads into customers. We focus on creating premium, scalable systems that help
+              businesses grow consistently online.
             </p>
 
             {/* Values */}
@@ -126,7 +128,7 @@ export default function AboutSection() {
                 { label: "150+ Clients", pos: "top-6 right-8", delay: 0 },
                 { label: "4.8x ROAS", pos: "bottom-12 left-4", delay: 0.3 },
                 { label: "97% Retention", pos: "top-24 left-2", delay: 0.6 },
-                { label: "$2.4M Revenue", pos: "bottom-4 right-6", delay: 0.9 },
+                { label: "$1M+ Revenue", pos: "bottom-4 right-6", delay: 0.9 },
               ].map((badge) => (
                 <motion.div
                   key={badge.label}

@@ -340,10 +340,10 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <p className="text-blue-500 text-[12px] uppercase tracking-[0.2em] font-semibold mb-3">
-            Our Services
+            What We Build
           </p>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
-            What We Build
+            Our Services
           </h2>
           <p className="mt-4 text-slate-500 text-[17px] max-w-lg mx-auto">
             Every service is a piece of a complete growth engine — not isolated tactics.

@@ -5,21 +5,21 @@ import type { Variants } from "framer-motion";
 
 const testimonials = [
   {
-    name: "James Harrington",
-    business: "Harrington Plumbing Co.",
-    result: "3x leads in 60 days",
+    name: "Leo Faclier",
+    business: "Faclier Brothers Collective",
+    result: "Real Results",
     gradient: "from-blue-600 to-blue-400",
   },
   {
-    name: "Sofia Delgado",
-    business: "Delgado Real Estate Group",
-    result: "$140K in new listings",
+    name: "Alex Newton",
+    business: "Leads Sweeps",
+    result: "Real Results",
     gradient: "from-blue-700 to-indigo-500",
   },
   {
-    name: "Marcus Webb",
-    business: "Webb Fitness Studios",
-    result: "68 new members in 30 days",
+    name: "Leon Brendel",
+    business: "GGA Safaris",
+    result: "Real Results",
     gradient: "from-indigo-600 to-blue-500",
   },
 ];
@@ -124,7 +124,7 @@ export default function VideoTestimonials() {
         >
           {[
             { val: "150+", label: "Clients Served" },
-            { val: "$2.4M", label: "Revenue Generated" },
+            { val: "$1M+", label: "Revenue Generated" },
             { val: "97%", label: "Retention Rate" },
           ].map((s) => (
             <div key={s.label}>

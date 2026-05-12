@@ -83,8 +83,7 @@ export default function FinalCTA() {
           {[
             "150+ Businesses Served",
             "97% Client Retention",
-            "$2.4M+ Revenue Generated",
-            "No Lock-in Contracts",
+            "$1M+ Revenue Generated",
           ].map((item) => (
             <div key={item} className="flex items-center gap-2 text-slate-500 text-[13px]">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
