@@ -65,20 +65,18 @@ export default function VideoTestimonials() {
             <motion.div
               key={t.name}
               variants={item}
-              className="rounded-3xl overflow-hidden border border-white/10 p-2 bg-white/5"
+              className="rounded-2xl overflow-hidden border border-white/10"
             >
-              <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "9/16" }}>
+              <div className="w-full" style={{ aspectRatio: "9/16" }}>
                 <iframe
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${t.videoId}?rel=0&modestbranding=1`}
+                  src={`https://www.youtube.com/embed/${t.videoId}?rel=0`}
                   title={t.name}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   style={{ border: 0, display: "block" }}
                 />
-                {/* Cover YouTube's title/channel overlay */}
-                <div className="absolute top-0 left-0 right-0 h-12 bg-black pointer-events-none z-10" />
               </div>
             </motion.div>
           ))}
