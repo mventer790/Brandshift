@@ -64,9 +64,9 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="max-w-4xl text-5xl sm:text-6xl lg:text-[76px] font-extrabold leading-[1.05] tracking-tight"
       >
-        <span className="text-white">Hands-free lead generation</span>
+        <span className="text-white">We specialize in getting</span>
         <br />
-        <span className="text-blue-400">systems built to grow.</span>
+        <span className="text-blue-400">businesses leads.</span>
       </motion.h1>
 
       {/* Subtext */}
