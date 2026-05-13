@@ -72,7 +72,7 @@ export default function VideoTestimonials() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube-nocookie.com/embed/${t.videoId}`}
+                  src={`https://www.youtube.com/embed/${t.videoId}?rel=0`}
                   title={`${t.name} — ${t.business}`}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
