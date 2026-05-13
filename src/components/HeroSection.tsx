@@ -118,7 +118,7 @@ function PulsingCTA() {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-20 overflow-hidden bg-[#07090f]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-40 pb-20 overflow-hidden bg-[#07090f]">
       {/* Background radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
