@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
 
 const reviews = [
   {
@@ -16,7 +15,7 @@ const reviews = [
     name: "Santiago Blautzik",
     handle: "1 review",
     rating: 5,
-    text: "We've been running lead gen campaigns for about 8 months now across different agencies and freelancers. Brand Shift Online is the first team that actually understood our funnel before touching the ad account. Within the first 3 weeks we had incredible results.",
+    text: "Brand Shift Online is the first team that actually understood our funnel before touching the ad account. Within the first 3 weeks we had incredible results.",
     initials: "SB",
     color: "#2563EB",
   },
@@ -32,7 +31,7 @@ const reviews = [
     name: "Austyn Cohen",
     handle: "Local Guide · 147 reviews",
     rating: 5,
-    text: "Brand Shift Online is doing seriously impressive things for businesses looking to scale properly in today's market. Their approach to lead generation, automation, and next generation AI systems gives companies a real competitive edge.",
+    text: "Brand Shift Online is doing seriously impressive things for businesses looking to scale properly in today's market. Their lead generation, automation, and AI systems give companies a real competitive edge.",
     initials: "AC",
     color: "#3B82F6",
   },
@@ -56,7 +55,7 @@ const reviews = [
     name: "Eden Faclier",
     handle: "Local Guide · 15 reviews",
     rating: 5,
-    text: "The team at Brandshift Online completely transformed our business. From building our website to handling our marketing and helping us scale from zero to where we are today, their work has been exceptional. Highly recommend to anyone serious about growth.",
+    text: "The team at Brandshift Online completely transformed our business. From building our website to handling our marketing and helping us scale from zero to where we are today, their work has been exceptional.",
     initials: "EF",
     color: "#3B82F6",
   },
@@ -66,7 +65,7 @@ function StarRating({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#FBBF24">
+        <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#FBBF24">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
         </svg>
       ))}
@@ -85,25 +84,47 @@ function GoogleLogo() {
   );
 }
 
-const container: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
-const card: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+function ReviewCard({ r }: { r: typeof reviews[0] }) {
+  return (
+    <div className="flex-shrink-0 w-72 bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-3 mx-3">
+      <div className="flex items-center gap-3">
+        <div
+          className="w-9 h-9 rounded-full flex items-center justify-center text-[12px] font-bold text-white shrink-0"
+          style={{ background: `linear-gradient(135deg, ${r.color}, ${r.color}99)` }}
+        >
+          {r.initials}
+        </div>
+        <div className="min-w-0">
+          <p className="font-semibold text-[13px] text-white truncate">{r.name}</p>
+          <p className="text-white/40 text-[11px] truncate">{r.handle}</p>
+        </div>
+        <div className="ml-auto shrink-0"><GoogleLogo /></div>
+      </div>
+      <StarRating count={r.rating} />
+      <p className="text-white/60 text-[13px] leading-relaxed">{r.text}</p>
+    </div>
+  );
+}
 
 export default function GoogleTestimonials() {
+  const doubled = [...reviews, ...reviews];
+
   return (
-    <section className="relative py-28 px-6 bg-[#07090f]">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-[#07090f] overflow-hidden">
+      {/* Blend from PsychSection (slate-900) into this section */}
+      <div
+        className="absolute top-0 inset-x-0 h-24 pointer-events-none z-10"
+        style={{ background: "linear-gradient(to bottom, #0f172a 0%, #07090f 100%)" }}
+      />
+
+      <div className="relative pt-24 pb-28">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-14"
+          className="text-center mb-12 px-6"
         >
           <div className="flex items-center justify-center gap-2 mb-3">
             <GoogleLogo />
@@ -120,51 +141,28 @@ export default function GoogleTestimonials() {
           </div>
         </motion.div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 [&_.card]:bg-white/5 [&_.card]:border-white/10"
-        >
-          {reviews.map((r) => (
-            <motion.div
-              key={r.name}
-              variants={card}
-              whileHover={{ y: -5 }}
-              className="card rounded-2xl p-5 flex flex-col gap-4"
-            >
-              {/* Header */}
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-[13px] font-bold text-white shrink-0"
-                  style={{ background: `linear-gradient(135deg, ${r.color}, ${r.color}bb)` }}
-                >
-                  {r.initials}
-                </div>
-                <div className="min-w-0">
-                  <p className="font-semibold text-[14px] text-white truncate">{r.name}</p>
-                  <p className="text-white/40 text-[11px] truncate">{r.handle}</p>
-                </div>
-                <div className="ml-auto shrink-0">
-                  <GoogleLogo />
-                </div>
-              </div>
+        {/* Sliding ticker */}
+        <div className="relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+            style={{ background: "linear-gradient(to right, #07090f, transparent)" }} />
+          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none"
+            style={{ background: "linear-gradient(to left, #07090f, transparent)" }} />
 
-              <StarRating count={r.rating} />
+          <div className="flex reviews-track" style={{ width: "max-content" }}>
+            {doubled.map((r, i) => (
+              <ReviewCard key={i} r={r} />
+            ))}
+          </div>
+        </div>
 
-              <p className="text-white/50 text-[13px] leading-relaxed flex-1">{r.text}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Link to Google Business profile */}
+        {/* Google Business link */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 text-center"
+          className="mt-10 text-center px-6"
         >
           <a
             href="https://share.google/Y6hDEW9vtowx58dN2"

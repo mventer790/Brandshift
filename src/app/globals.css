@@ -81,6 +81,18 @@ body {
   animation: glow-word 3s ease-in-out infinite;
 }
 
+/* ─── Sliding reviews ticker ─────────────────────────────── */
+@keyframes slide-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.reviews-track {
+  animation: slide-left 35s linear infinite;
+}
+.reviews-track:hover {
+  animation-play-state: paused;
+}
+
 /* ─── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #07090f; }

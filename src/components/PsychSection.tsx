@@ -29,6 +29,12 @@ export default function PsychSection() {
       {/* Dark full-bleed background */}
       <div className="absolute inset-0 bg-slate-900" />
       <div className="absolute inset-0 grid-overlay opacity-60" />
+      {/* Blend from ServicesSection above */}
+      <div className="absolute top-0 inset-x-0 h-24 pointer-events-none z-10"
+        style={{ background: "linear-gradient(to bottom, #07090f 0%, #0f172a 100%)" }} />
+      {/* Blend into GoogleTestimonials below */}
+      <div className="absolute bottom-0 inset-x-0 h-24 pointer-events-none z-10"
+        style={{ background: "linear-gradient(to top, #07090f 0%, transparent 100%)" }} />
 
       {/* Radial centre glow */}
       <div
