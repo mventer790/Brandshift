@@ -1,44 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
-
-const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%";
-
-function useScramble(target: string, delay = 0) {
-  const [display, setDisplay] = useState(() => target.replace(/./g, " "));
-  const frame = useRef(0);
-  const started = useRef(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      started.current = true;
-      let iteration = 0;
-      const interval = setInterval(() => {
-        setDisplay(
-          target
-            .split("")
-            .map((char, i) => {
-              if (char === " ") return " ";
-              if (i < iteration) return char;
-              return CHARS[Math.floor(Math.random() * CHARS.length)];
-            })
-            .join("")
-        );
-        iteration += 0.8;
-        if (iteration >= target.length) {
-          clearInterval(interval);
-          setDisplay(target);
-        }
-      }, 20);
-      frame.current = interval as unknown as number;
-      return () => clearInterval(interval);
-    }, delay);
-    return () => clearTimeout(timeout);
-  }, [target, delay]);
-
-  return display;
-}
 
 function MetaLogo() {
   return (
@@ -72,26 +34,6 @@ function GoogleLogo() {
   );
 }
 
-function ScrambleHeading() {
-  const line1 = useScramble("We specialize in getting", 200);
-  const line2 = useScramble("businesses", 500);
-  const line3 = useScramble("leads.", 800);
-
-  return (
-    <motion.h1
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="max-w-4xl text-5xl sm:text-6xl lg:text-[76px] font-extrabold leading-[1.1] tracking-tight"
-    >
-      <span className="text-white block">{line1}</span>
-      <span className="block mt-1">
-        <span className="text-white">{line2} </span>
-        <span className="text-blue-400">{line3}</span>
-      </span>
-    </motion.h1>
-  );
-}
 
 export default function HeroSection() {
   return (
@@ -117,7 +59,18 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Headline */}
-      <ScrambleHeading />
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="max-w-4xl text-5xl sm:text-6xl lg:text-[76px] font-extrabold leading-[1.1] tracking-tight"
+      >
+        <span className="text-white block">We specialize in getting</span>
+        <span className="block mt-1">
+          <span className="text-white">businesses </span>
+          <span className="text-blue-400">leads.</span>
+        </span>
+      </motion.h1>
 
       {/* Subtext */}
       <motion.p
