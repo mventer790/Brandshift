@@ -111,13 +111,7 @@ export default function GoogleTestimonials() {
 
   return (
     <section className="relative bg-[#07090f] overflow-hidden">
-      {/* Blend from PsychSection (slate-900) into this section */}
-      <div
-        className="absolute top-0 inset-x-0 h-24 pointer-events-none z-10"
-        style={{ background: "linear-gradient(to bottom, #0f172a 0%, #07090f 100%)" }}
-      />
-
-      <div className="relative pt-24 pb-28">
+      <div className="relative pt-16 pb-28">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

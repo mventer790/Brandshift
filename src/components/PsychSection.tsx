@@ -33,8 +33,8 @@ export default function PsychSection() {
       <div className="absolute top-0 inset-x-0 h-24 pointer-events-none z-10"
         style={{ background: "linear-gradient(to bottom, #07090f 0%, #0f172a 100%)" }} />
       {/* Blend into GoogleTestimonials below */}
-      <div className="absolute bottom-0 inset-x-0 h-24 pointer-events-none z-10"
-        style={{ background: "linear-gradient(to top, #07090f 0%, transparent 100%)" }} />
+      <div className="absolute bottom-0 inset-x-0 h-48 pointer-events-none z-10"
+        style={{ background: "linear-gradient(to top, #07090f 0%, #07090f 20%, transparent 100%)" }} />
 
       {/* Radial centre glow */}
       <div
