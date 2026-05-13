@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const pathname = request.nextUrl.pathname;
 
-  // Route funnel subdomain (e.g. funnel.brandshiftonline.com) to /funnel
   const isFunnelSubdomain =
     hostname.startsWith("funnel.") ||
     hostname === "funnel.brandshiftonline.com" ||
