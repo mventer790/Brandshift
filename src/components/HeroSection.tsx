@@ -87,28 +87,7 @@ function ScrambleHeading() {
       <span className="text-white block">{line1}</span>
       <span className="block mt-1">
         <span className="text-white">{line2} </span>
-        <span className="relative inline-block text-blue-400">
-          {line3}
-          <motion.svg
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 2.2, ease: "easeOut" }}
-            className="absolute -bottom-2 left-0 w-full"
-            viewBox="0 0 200 10"
-            preserveAspectRatio="none"
-            fill="none"
-          >
-            <motion.path
-              d="M0 6 Q25 1 50 6 Q75 11 100 6 Q125 1 150 6 Q175 11 200 6"
-              stroke="#60a5fa"
-              strokeWidth="3"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.9, delay: 2.2, ease: "easeOut" }}
-            />
-          </motion.svg>
-        </span>
+        <span className="text-blue-400">{line3}</span>
       </span>
     </motion.h1>
   );
