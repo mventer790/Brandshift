@@ -16,8 +16,8 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <SystemSection />
         <VideoTestimonials />
+        <SystemSection />
         <ServicesSection />
         <PsychSection />
         <GoogleTestimonials />

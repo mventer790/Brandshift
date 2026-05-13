@@ -75,7 +75,7 @@ export default function SystemSection() {
             How It Works
           </p>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-            The Proven Growth System
+            Proven System
           </h2>
           <p className="mt-4 text-white text-[17px] max-w-lg mx-auto leading-relaxed">
             Three interconnected layers — each one amplifying the next.
