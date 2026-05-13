@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 h-12 sm:h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="shrink-0">
-          <span className="font-extrabold text-[16px] sm:text-[22px] tracking-tight uppercase text-white">
+          <span className="font-extrabold text-[19px] sm:text-[22px] tracking-tight uppercase text-white">
             BrandshiftOnline
           </span>
         </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contact"
-          className="flex items-center gap-1 text-[11px] sm:text-[13px] font-semibold px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full bg-white hover:bg-white/90 text-slate-900 transition-all duration-200 whitespace-nowrap"
+          className="flex items-center gap-1 text-[13px] sm:text-[13px] font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-white/90 text-slate-900 transition-all duration-200 whitespace-nowrap"
         >
           Book A Call
           <svg className="hidden sm:block" width="12" height="12" viewBox="0 0 12 12" fill="none">
