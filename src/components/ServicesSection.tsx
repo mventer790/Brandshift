@@ -313,7 +313,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
           {service.icon}
         </div>
         <h3 className="font-bold text-[17px] leading-snug mb-2 text-white">{service.title}</h3>
-        <p className="text-white/50 text-[14px] leading-relaxed flex-1">{service.description}</p>
+        <p className="text-white text-[14px] leading-relaxed flex-1">{service.description}</p>
         <div className="flex flex-wrap gap-1.5 mt-4">
           {service.tags.map((tag) => (
             <span key={tag} className="text-[10px] px-2.5 py-1 rounded-full font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
@@ -345,7 +345,7 @@ export default function ServicesSection() {
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             Our Services
           </h2>
-          <p className="mt-4 text-white/50 text-[17px] max-w-lg mx-auto">
+          <p className="mt-4 text-white text-[17px] max-w-lg mx-auto">
             Every service is a piece of a complete growth engine — not isolated tactics.
           </p>
         </motion.div>

@@ -48,7 +48,7 @@ export default function VideoTestimonials() {
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             Real Businesses. Real Results.
           </h2>
-          <p className="mt-4 text-white/50 text-[17px] max-w-md mx-auto">
+          <p className="mt-4 text-white text-[17px] max-w-md mx-auto">
             Watch how we transformed their growth.
           </p>
         </motion.div>

@@ -101,7 +101,7 @@ function ReviewCard({ r }: { r: typeof reviews[0] }) {
         <div className="ml-auto shrink-0"><GoogleLogo /></div>
       </div>
       <StarRating count={r.rating} />
-      <p className="text-white/60 text-[13px] leading-relaxed">{r.text}</p>
+      <p className="text-white text-[13px] leading-relaxed">{r.text}</p>
     </div>
   );
 }

@@ -110,7 +110,7 @@ export default function FunnelPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mt-6 max-w-lg text-white/50 text-[17px] leading-relaxed"
+          className="mt-6 max-w-lg text-white text-[17px] leading-relaxed"
         >
           Book a free strategy call. We&apos;ll audit your digital presence and
           show you exactly how to build a system that generates leads on autopilot.
@@ -218,7 +218,7 @@ export default function FunnelPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className="flex items-center gap-3 text-[16px] text-white/80"
+                  className="flex items-center gap-3 text-[16px] text-white"
                 >
                   <div className="w-5 h-5 rounded-full bg-blue-500/20 border border-blue-500/40 flex items-center justify-center shrink-0">
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
@@ -271,7 +271,7 @@ export default function FunnelPage() {
                   </div>
                   <div className="ml-auto"><GoogleLogo /></div>
                 </div>
-                <p className="text-white/50 text-[13px] leading-relaxed">{r.text}</p>
+                <p className="text-white text-[13px] leading-relaxed">{r.text}</p>
               </motion.div>
             ))}
           </div>
@@ -291,7 +291,7 @@ export default function FunnelPage() {
               Book Your Free<br />
               <span className="text-blue-400">Strategy Call</span>
             </h2>
-            <p className="text-white/50 text-[16px] mb-10 leading-relaxed">
+            <p className="text-white text-[16px] mb-10 leading-relaxed">
               30 minutes. No pitch. Just a clear plan for how to grow your business online.
             </p>
 

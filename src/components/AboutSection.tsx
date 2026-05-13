@@ -57,13 +57,13 @@ export default function AboutSection() {
               <br />
               <span className="text-blue-400">Not Excuses.</span>
             </h2>
-            <p className="text-white/50 text-[16px] sm:text-[17px] leading-relaxed mb-5">
+            <p className="text-white text-[16px] sm:text-[17px] leading-relaxed mb-5">
               Brand Shift Online is a South African digital agency specializing in hands-free lead generation systems
               for businesses locally and worldwide. We help companies grow through high-converting websites,
               Meta &amp; Google Ads, social media management, ecommerce development, AI-powered systems,
               and digital strategy.
             </p>
-            <p className="text-white/50 text-[16px] sm:text-[17px] leading-relaxed mb-10">
+            <p className="text-white text-[16px] sm:text-[17px] leading-relaxed mb-10">
               Our approach is built around proven industry blueprints designed to attract attention, build trust,
               and convert leads into customers. We focus on creating premium, scalable systems that help
               businesses grow consistently online.
@@ -85,7 +85,7 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-[15px] mb-0.5 text-white">{v.label}</p>
-                    <p className="text-white/50 text-[13px] leading-relaxed">{v.desc}</p>
+                    <p className="text-white text-[13px] leading-relaxed">{v.desc}</p>
                   </div>
                 </motion.div>
               ))}

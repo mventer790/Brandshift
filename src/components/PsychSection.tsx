@@ -150,7 +150,7 @@ export default function PsychSection() {
                   {s.word}
                 </p>
               </div>
-              <p className="text-[11px] text-white/40 text-center leading-snug px-1 hidden sm:block">
+              <p className="text-[11px] text-white text-center leading-snug px-1 hidden sm:block">
                 {s.desc}
               </p>
             </motion.div>

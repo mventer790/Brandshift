@@ -74,7 +74,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="mt-7 max-w-xl text-white/50 text-[17px] leading-relaxed"
+        className="mt-7 max-w-xl text-white text-[17px] leading-relaxed"
       >
         We build complete acquisition systems that bring attention, build trust,
         and convert leads into customers — automatically.
@@ -106,7 +106,7 @@ export default function HeroSection() {
         transition={{ duration: 0.7, delay: 0.75 }}
         className="mt-14 flex items-center gap-8"
       >
-        <div className="flex items-center gap-2.5 text-white/40">
+        <div className="flex items-center gap-2.5 text-white">
           <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
             <circle cx="20" cy="20" r="20" fill="#1877F2" opacity="0.9"/>
             <path d="M22.5 20.5h3l.5-3.5h-3.5V15c0-1 .5-2 2-2H26v-3s-1.3-.2-2.5-.2c-2.6 0-4.3 1.6-4.3 4.4v2.8H16v3.5h3.2V29h3.3V20.5z" fill="white"/>
@@ -114,7 +114,7 @@ export default function HeroSection() {
           <span className="text-[13px] font-medium">Meta Ads</span>
         </div>
         <div className="w-px h-4 bg-white/10" />
-        <div className="flex items-center gap-2.5 text-white/40">
+        <div className="flex items-center gap-2.5 text-white">
           <GoogleLogo />
           <span className="text-[13px] font-medium">Google Ads</span>
         </div>
