@@ -27,7 +27,7 @@ export default function MobileCTA() {
         >
           <a
             href="#contact"
-            className="btn-glow block w-full bg-blue-500 hover:bg-blue-600 text-white text-[15px] font-bold py-4 rounded-full text-center transition-colors duration-200"
+            className="btn-beat block w-full text-[15px] font-bold py-4 rounded-full text-center"
           >
             Book A Call Now
           </a>

@@ -54,7 +54,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#contact"
-          className="flex items-center gap-1 text-[13px] sm:text-[13px] font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white hover:bg-white/90 text-slate-900 transition-all duration-200 whitespace-nowrap"
+          className="btn-beat flex items-center gap-1 text-[13px] font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full whitespace-nowrap"
         >
           Book A Call
           <svg className="hidden sm:block" width="12" height="12" viewBox="0 0 12 12" fill="none">

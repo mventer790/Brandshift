@@ -58,17 +58,15 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <motion.a
+          <a
             href="#"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="btn-glow bg-blue-500 hover:bg-blue-400 text-white font-bold text-[16px] px-10 py-4 rounded-full transition-colors duration-200 flex items-center gap-3"
+            className="btn-beat font-bold text-[16px] px-10 py-4 rounded-full flex items-center gap-3"
           >
             Book A Call Now
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </motion.a>
+          </a>
           <p className="text-slate-500 text-[13px]">No commitment · 30 minutes · 100% free</p>
         </motion.div>
 

@@ -69,7 +69,7 @@ export default function FunnelPage() {
           </span>
           <a
             href="#book"
-            className="bg-white text-slate-900 text-[12px] font-bold px-4 py-2 rounded-full hover:bg-white/90 transition-colors whitespace-nowrap"
+            className="btn-beat text-[12px] font-bold px-4 py-2 rounded-full whitespace-nowrap"
           >
             Book Free Call
           </a>
@@ -123,7 +123,7 @@ export default function FunnelPage() {
           transition={{ duration: 0.6, delay: 0.4 }}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="mt-8 inline-flex items-center gap-2 bg-white text-slate-900 font-bold text-[16px] px-10 py-4 rounded-full transition-all"
+          className="btn-beat mt-8 inline-flex items-center gap-2 font-bold text-[16px] px-10 py-4 rounded-full"
           style={{ boxShadow: "0 0 40px rgba(255,255,255,0.12)" }}
         >
           Book My Free Call
@@ -302,7 +302,7 @@ export default function FunnelPage() {
                 href="#"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center gap-2 bg-white text-slate-900 font-bold text-[16px] px-10 py-4 rounded-full"
+                className="btn-beat inline-flex items-center gap-2 font-bold text-[16px] px-10 py-4 rounded-full"
                 style={{ boxShadow: "0 0 40px rgba(255,255,255,0.12)" }}
               >
                 Choose a Time

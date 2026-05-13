@@ -82,26 +82,15 @@ function PulsingCTA() {
   return (
     <div className="relative inline-block">
       {/* Heartbeat button */}
-      <motion.a
+      <a
         href="#contact"
-        animate={{
-          scale: [1, 1.07, 0.97, 1.05, 1],
-          boxShadow: [
-            "0 0 20px rgba(255,255,255,0.12)",
-            "0 0 40px rgba(255,255,255,0.35)",
-            "0 0 20px rgba(255,255,255,0.12)",
-            "0 0 36px rgba(255,255,255,0.28)",
-            "0 0 20px rgba(255,255,255,0.12)",
-          ],
-        }}
-        transition={{ duration: 1.2, times: [0, 0.2, 0.4, 0.6, 1], repeat: Infinity, repeatDelay: 0.6, ease: "easeInOut" }}
-        className="inline-flex items-center gap-2.5 bg-white text-slate-900 font-semibold text-[15px] px-8 py-3.5 rounded-full"
+        className="btn-beat inline-flex items-center gap-2.5 font-semibold text-[15px] px-8 py-3.5 rounded-full"
       >
         Book a Call
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M3 7h8M8 4.5L10.5 7 8 9.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M3 7h8M8 4.5L10.5 7 8 9.5" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-      </motion.a>
+      </a>
 
       {/* Click ripple */}
       {clicking && (
@@ -110,7 +99,7 @@ function PulsingCTA() {
           initial={{ scale: 0.5, opacity: 0.6 }}
           animate={{ scale: 2.2, opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="absolute inset-0 rounded-full border-2 border-white pointer-events-none"
+          className="absolute inset-0 rounded-full border-2 border-blue-400 pointer-events-none"
         />
       )}
 

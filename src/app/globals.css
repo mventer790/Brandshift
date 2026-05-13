@@ -81,6 +81,23 @@ body {
   animation: glow-word 3s ease-in-out infinite;
 }
 
+/* ─── Blue heartbeat button ──────────────────────────────── */
+@keyframes btn-heartbeat {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 14px rgba(59,130,246,0.45), 0 0 30px rgba(59,130,246,0.2); }
+  14%       { transform: scale(1.07); box-shadow: 0 0 28px rgba(59,130,246,0.8), 0 0 55px rgba(59,130,246,0.35); }
+  28%       { transform: scale(0.98); box-shadow: 0 0 14px rgba(59,130,246,0.45), 0 0 30px rgba(59,130,246,0.2); }
+  42%       { transform: scale(1.05); box-shadow: 0 0 22px rgba(59,130,246,0.7), 0 0 45px rgba(59,130,246,0.3); }
+  70%       { transform: scale(1);    box-shadow: 0 0 14px rgba(59,130,246,0.45), 0 0 30px rgba(59,130,246,0.2); }
+}
+.btn-beat {
+  animation: btn-heartbeat 1.8s ease-in-out infinite;
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+.btn-beat:hover {
+  background-color: #2563eb !important;
+}
+
 /* ─── Sliding reviews ticker ─────────────────────────────── */
 @keyframes slide-left {
   0%   { transform: translateX(0); }
