@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Brandshift — Hands-Free Lead Generation Systems",
   description:
     "We build complete acquisition systems that bring attention, build trust, and convert leads into customers automatically.",
+};
+
+export const viewport: Viewport = {
   themeColor: "#07090f",
 };
 
@@ -19,7 +22,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} scroll-smooth`}>
+    <html lang="en" className={`${geist.variable} scroll-smooth bg-[#07090f]`}>
       <body className="bg-[#07090f] text-white antialiased overflow-x-hidden">
         {children}
       </body>
