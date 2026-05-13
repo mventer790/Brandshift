@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 function MetaLogo() {
   return (
@@ -34,6 +35,97 @@ function GoogleLogo() {
   );
 }
 
+
+function CursorIcon({ clicking }: { clicking: boolean }) {
+  return (
+    <svg width="22" height="26" viewBox="0 0 22 26" fill="none" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.5))" }}>
+      <path d="M1 1l6.5 18.5 3.5-5.5 6 5-2-2.5-4.5-3.5 3-4.5L1 1z" fill="white" stroke="#333" strokeWidth="1.2" strokeLinejoin="round"/>
+      {clicking && (
+        <circle cx="11" cy="11" r="4" fill="rgba(255,255,255,0.3)" />
+      )}
+    </svg>
+  );
+}
+
+function PulsingCTA() {
+  const [clicking, setClicking] = useState(false);
+  const [phase, setPhase] = useState<"idle"|"moving"|"clicking"|"lifting">("idle");
+
+  useEffect(() => {
+    let t: ReturnType<typeof setTimeout>;
+    const loop = () => {
+      setPhase("moving");
+      t = setTimeout(() => {
+        setPhase("clicking");
+        setClicking(true);
+        t = setTimeout(() => {
+          setClicking(false);
+          setPhase("lifting");
+          t = setTimeout(() => {
+            setPhase("idle");
+            t = setTimeout(loop, 800);
+          }, 400);
+        }, 350);
+      }, 900);
+    };
+    t = setTimeout(loop, 1200);
+    return () => clearTimeout(t);
+  }, []);
+
+  const cursorVariants = {
+    idle:     { x: 90, y: 30, opacity: 0, scale: 1 },
+    moving:   { x: 10, y: 8,  opacity: 1, scale: 1,   transition: { duration: 0.7, ease: "easeOut" } },
+    clicking: { x: 10, y: 8,  opacity: 1, scale: 0.85, transition: { duration: 0.15 } },
+    lifting:  { x: 30, y: -10, opacity: 0, scale: 1,   transition: { duration: 0.35, ease: "easeIn" } },
+  };
+
+  return (
+    <div className="relative inline-block">
+      {/* Heartbeat button */}
+      <motion.a
+        href="#contact"
+        animate={{
+          scale: [1, 1.07, 0.97, 1.05, 1],
+          boxShadow: [
+            "0 0 20px rgba(255,255,255,0.12)",
+            "0 0 40px rgba(255,255,255,0.35)",
+            "0 0 20px rgba(255,255,255,0.12)",
+            "0 0 36px rgba(255,255,255,0.28)",
+            "0 0 20px rgba(255,255,255,0.12)",
+          ],
+        }}
+        transition={{ duration: 1.2, times: [0, 0.2, 0.4, 0.6, 1], repeat: Infinity, repeatDelay: 0.6, ease: "easeInOut" }}
+        className="inline-flex items-center gap-2.5 bg-white text-slate-900 font-semibold text-[15px] px-8 py-3.5 rounded-full"
+      >
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 7h8M8 4.5L10.5 7 8 9.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </motion.a>
+
+      {/* Click ripple */}
+      {clicking && (
+        <motion.div
+          key={Date.now()}
+          initial={{ scale: 0.5, opacity: 0.6 }}
+          animate={{ scale: 2.2, opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="absolute inset-0 rounded-full border-2 border-white pointer-events-none"
+        />
+      )}
+
+      {/* Animated cursor */}
+      <motion.div
+        className="absolute bottom-0 right-0 pointer-events-none"
+        variants={cursorVariants}
+        animate={phase}
+        initial="idle"
+      >
+        <CursorIcon clicking={clicking} />
+      </motion.div>
+    </div>
+  );
+}
 
 export default function HeroSection() {
   return (
@@ -90,16 +182,7 @@ export default function HeroSection() {
         transition={{ duration: 0.7, delay: 0.55 }}
         className="mt-9"
       >
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-2.5 bg-white text-slate-900 font-semibold text-[15px] px-8 py-3.5 rounded-full transition-all duration-200 hover:bg-white/90 hover:scale-[1.02]"
-          style={{ boxShadow: "0 0 30px rgba(255,255,255,0.12)" }}
-        >
-          Book a Call
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M3 7h8M8 4.5L10.5 7 8 9.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </a>
+        <PulsingCTA />
       </motion.div>
 
       {/* Platform logos */}
