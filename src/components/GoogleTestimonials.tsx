@@ -5,35 +5,59 @@ import type { Variants } from "framer-motion";
 
 const reviews = [
   {
-    name: "Daniel Kowalski",
-    handle: "Owner · Kowalski HVAC",
+    name: "Alexander Newton",
+    handle: "1 review",
     rating: 5,
-    text: "Brandshift completely transformed how we generate leads. Within 45 days we had more inbound enquiries than the entire previous quarter. The system runs itself.",
-    initials: "DK",
+    text: "John and his team have been excellent! They under promised and over delivered. Communication was on point and they delivered the final product a week before the deadline. 10/10 experience.",
+    initials: "AN",
     color: "#3B82F6",
   },
   {
-    name: "Rachel Nguyen",
-    handle: "Director · Nguyen Property Group",
+    name: "Santiago Blautzik",
+    handle: "1 review",
     rating: 5,
-    text: "Every agency promised results. Brandshift delivered them. Our website conversions doubled and the Meta ads pay for themselves 4x over. Genuinely impressive.",
-    initials: "RN",
+    text: "We've been running lead gen campaigns for about 8 months now across different agencies and freelancers. Brand Shift Online is the first team that actually understood our funnel before touching the ad account. Within the first 3 weeks we had incredible results.",
+    initials: "SB",
     color: "#2563EB",
   },
   {
-    name: "Tom Ashworth",
-    handle: "Founder · Peak Performance Gym",
+    name: "Lucky Packs",
+    handle: "4 reviews",
     rating: 5,
-    text: "The AI receptionist alone was a game-changer. Leads used to fall through the cracks. Now every enquiry gets followed up instantly. We signed 31 new members last month.",
-    initials: "TA",
+    text: "Brilliant service. Absolutely recommendable! Thank you for helping me run ads 🙌",
+    initials: "LP",
     color: "#1D4ED8",
   },
   {
-    name: "Claire Bennett",
-    handle: "CEO · Bennett Legal Advisory",
+    name: "Austyn Cohen",
+    handle: "Local Guide · 147 reviews",
     rating: 5,
-    text: "I was sceptical at first — we'd been burned by agencies before. Brandshift is different. They built us a complete system, not just a pretty website. ROI is exceptional.",
-    initials: "CB",
+    text: "Brand Shift Online is doing seriously impressive things for businesses looking to scale properly in today's market. Their approach to lead generation, automation, and next generation AI systems gives companies a real competitive edge.",
+    initials: "AC",
+    color: "#3B82F6",
+  },
+  {
+    name: "Fabian Modricky",
+    handle: "8 reviews",
+    rating: 5,
+    text: "I must say, I'm very impressed. Customer service was also on point! Will be purchasing again at the end of the month!!",
+    initials: "FM",
+    color: "#2563EB",
+  },
+  {
+    name: "Leon Brendel",
+    handle: "9 reviews",
+    rating: 5,
+    text: "I would never ever ever go to anyone else besides these guys.",
+    initials: "LB",
+    color: "#1D4ED8",
+  },
+  {
+    name: "Eden Faclier",
+    handle: "Local Guide · 15 reviews",
+    rating: 5,
+    text: "The team at Brandshift Online completely transformed our business. From building our website to handling our marketing and helping us scale from zero to where we are today, their work has been exceptional. Highly recommend to anyone serious about growth.",
+    initials: "EF",
     color: "#3B82F6",
   },
 ];
@@ -92,7 +116,7 @@ export default function GoogleTestimonials() {
           </h2>
           <div className="flex items-center justify-center gap-2 mt-4">
             <StarRating count={5} />
-            <span className="text-white/40 text-[14px]">5.0 · 40+ reviews</span>
+            <span className="text-white/40 text-[14px]">5.0 · 7 reviews</span>
           </div>
         </motion.div>
 
@@ -101,7 +125,7 @@ export default function GoogleTestimonials() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 [&_.card]:bg-white/5 [&_.card]:border-white/10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 [&_.card]:bg-white/5 [&_.card]:border-white/10"
         >
           {reviews.map((r) => (
             <motion.div
