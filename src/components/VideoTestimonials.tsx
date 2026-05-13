@@ -67,7 +67,7 @@ export default function VideoTestimonials() {
               variants={item}
               className="rounded-2xl overflow-hidden border border-white/10"
             >
-              <div className="w-full" style={{ aspectRatio: "9/16" }}>
+              <div className="relative w-full" style={{ aspectRatio: "9/16" }}>
                 <iframe
                   width="100%"
                   height="100%"
@@ -76,6 +76,11 @@ export default function VideoTestimonials() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   style={{ border: 0, display: "block" }}
+                />
+                {/* Cover YouTube's title/channel overlay in top-left */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-14 pointer-events-none"
+                  style={{ background: "linear-gradient(to bottom, #000 0%, transparent 100%)" }}
                 />
               </div>
             </motion.div>
