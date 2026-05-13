@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Leon Brendel",
     business: "GGA Safaris",
-    videoId: "eGNvMZeJ3yE",
+    videoId: "7yU-0lP6G1g",
   },
   {
     name: "Alex Newton",
@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: "Leo Faclier",
     business: "Faclier Brothers Collective",
-    videoId: "7yU-0lP6G1g",
+    videoId: "eGNvMZeJ3yE",
   },
 ];
 
