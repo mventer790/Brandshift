@@ -66,7 +66,23 @@ export default function HeroSection() {
       >
         <span className="text-white">We specialize in getting</span>
         <br />
-        <span className="text-blue-400">businesses leads.</span>
+        <span className="text-blue-400">businesses </span>
+        <span className="relative inline-block text-blue-400">
+          leads.
+          <svg
+            className="absolute -bottom-2 left-0 w-full"
+            viewBox="0 0 200 10"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            <path
+              d="M0 6 Q25 1 50 6 Q75 11 100 6 Q125 1 150 6 Q175 11 200 6"
+              stroke="#60a5fa"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </svg>
+        </span>
       </motion.h1>
 
       {/* Subtext */}
