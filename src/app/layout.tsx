@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Brandshift — Hands-Free Lead Generation Systems",
   description:
     "We build complete acquisition systems that bring attention, build trust, and convert leads into customers automatically.",
+  themeColor: "#07090f",
 };
 
 export default function RootLayout({
