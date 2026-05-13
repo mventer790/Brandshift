@@ -22,7 +22,7 @@ export default function MobileCTA() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="fixed bottom-0 inset-x-0 z-40 md:hidden p-4"
           style={{
-            background: "linear-gradient(to top, rgba(7,9,15,0.98) 70%, transparent)",
+            background: "#07090f",
           }}
         >
           <a
