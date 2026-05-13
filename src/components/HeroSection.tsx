@@ -25,12 +25,12 @@ function useScramble(target: string, delay = 0) {
             })
             .join("")
         );
-        iteration += 0.4;
+        iteration += 0.8;
         if (iteration >= target.length) {
           clearInterval(interval);
           setDisplay(target);
         }
-      }, 30);
+      }, 20);
       frame.current = interval as unknown as number;
       return () => clearInterval(interval);
     }, delay);
@@ -73,9 +73,9 @@ function GoogleLogo() {
 }
 
 function ScrambleHeading() {
-  const line1 = useScramble("We specialize in getting", 400);
-  const line2 = useScramble("businesses", 900);
-  const line3 = useScramble("leads.", 1400);
+  const line1 = useScramble("We specialize in getting", 200);
+  const line2 = useScramble("businesses", 500);
+  const line3 = useScramble("leads.", 800);
 
   return (
     <motion.h1
