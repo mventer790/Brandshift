@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const links = [
@@ -11,24 +10,13 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#07090f]/95 backdrop-blur-xl border-b border-white/10"
-          : "bg-transparent"
-      }`}
+      className="absolute top-0 inset-x-0 z-50 bg-transparent"
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-8 h-12 sm:h-16 flex items-center justify-between gap-2">
         {/* Logo */}
