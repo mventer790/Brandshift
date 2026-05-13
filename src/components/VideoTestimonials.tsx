@@ -65,9 +65,9 @@ export default function VideoTestimonials() {
             <motion.div
               key={t.name}
               variants={item}
-              className="rounded-2xl overflow-hidden border border-white/10"
+              className="rounded-3xl overflow-hidden border border-white/10 p-2 bg-white/5"
             >
-              <div className="relative w-full" style={{ aspectRatio: "9/16" }}>
+              <div className="relative w-full rounded-2xl overflow-hidden" style={{ aspectRatio: "9/16" }}>
                 <iframe
                   width="100%"
                   height="100%"
