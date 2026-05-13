@@ -68,13 +68,15 @@ export default function VideoTestimonials() {
               className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-white/5"
             >
               {/* YouTube Short embed — portrait 9:16 */}
-              <div className="relative w-full" style={{ paddingBottom: "177.78%" }}>
+              <div className="w-full" style={{ aspectRatio: "9/16" }}>
                 <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src={`https://www.youtube.com/embed/${t.videoId}?rel=0&modestbranding=1`}
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube-nocookie.com/embed/${t.videoId}`}
                   title={`${t.name} — ${t.business}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  style={{ border: 0, display: "block" }}
                 />
               </div>
 
