@@ -26,7 +26,7 @@ export default function Navbar() {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm"
+          ? "bg-[#07090f]/95 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -34,11 +34,9 @@ export default function Navbar() {
         {/* Logo — bold text only, no icon */}
         <a href="#" className="shrink-0">
           <span
-            className={`font-extrabold text-[22px] tracking-tight uppercase transition-colors duration-300 ${
-              scrolled ? "text-slate-900" : "text-white"
-            }`}
+            className="font-extrabold text-[22px] tracking-tight uppercase text-white"
           >
-            BrandShift
+            BrandshiftOnline
           </span>
         </a>
 
@@ -48,11 +46,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className={`text-[13px] font-medium transition-colors duration-200 ${
-                scrolled
-                  ? "text-slate-500 hover:text-slate-900"
-                  : "text-white/70 hover:text-white"
-              }`}
+              className="text-[13px] font-medium text-white/60 hover:text-white transition-colors duration-200"
             >
               {l.label}
             </a>
@@ -62,11 +56,7 @@ export default function Navbar() {
         {/* CTA — white pill on dark, blue pill on light */}
         <a
           href="#contact"
-          className={`flex items-center gap-2 text-[13px] font-semibold px-5 py-2.5 rounded-full transition-all duration-200 ${
-            scrolled
-              ? "bg-blue-500 hover:bg-blue-600 text-white"
-              : "bg-white hover:bg-white/90 text-slate-900"
-          }`}
+          className="flex items-center gap-2 text-[13px] font-semibold px-5 py-2.5 rounded-full bg-white hover:bg-white/90 text-slate-900 transition-all duration-200"
         >
           Book A Call
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

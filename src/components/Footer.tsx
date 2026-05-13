@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-slate-200 bg-white py-10 px-6">
+    <footer className="relative border-t border-white/10 bg-[#07090f] py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <motion.a
           href="#"
@@ -23,8 +23,8 @@ export default function Footer() {
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="font-bold text-[17px] tracking-tight text-slate-900">
-            Brand<span className="text-blue-500">shift</span>
+          <span className="font-bold text-[17px] tracking-tight text-white">
+            BrandShift<span className="text-blue-400">Online</span>
           </span>
         </motion.a>
 
@@ -33,7 +33,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-slate-400 text-[13px] text-center"
+          className="text-white/30 text-[13px] text-center"
         >
           © {new Date().getFullYear()} Brandshift. All rights reserved.
         </motion.p>
@@ -49,7 +49,7 @@ export default function Footer() {
             <a
               key={l}
               href="#"
-              className="text-slate-400 hover:text-slate-700 text-[13px] transition-colors"
+              className="text-white/30 hover:text-white/70 text-[13px] transition-colors"
             >
               {l}
             </a>

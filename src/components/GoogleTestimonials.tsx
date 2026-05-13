@@ -72,7 +72,7 @@ const card: Variants = {
 
 export default function GoogleTestimonials() {
   return (
-    <section className="relative py-28 px-6 bg-slate-50">
+    <section className="relative py-28 px-6 bg-[#07090f]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -83,16 +83,16 @@ export default function GoogleTestimonials() {
         >
           <div className="flex items-center justify-center gap-2 mb-3">
             <GoogleLogo />
-            <p className="text-slate-400 text-[12px] uppercase tracking-[0.2em] font-semibold">
+            <p className="text-white/40 text-[12px] uppercase tracking-[0.2em] font-semibold">
               Google Reviews
             </p>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             What Our Clients Say
           </h2>
           <div className="flex items-center justify-center gap-2 mt-4">
             <StarRating count={5} />
-            <span className="text-slate-400 text-[14px]">5.0 · 40+ reviews</span>
+            <span className="text-white/40 text-[14px]">5.0 · 40+ reviews</span>
           </div>
         </motion.div>
 
@@ -101,14 +101,14 @@ export default function GoogleTestimonials() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 [&_.card]:bg-white/5 [&_.card]:border-white/10"
         >
           {reviews.map((r) => (
             <motion.div
               key={r.name}
               variants={card}
               whileHover={{ y: -5 }}
-              className="card rounded-2xl p-5 flex flex-col gap-4 bg-white"
+              className="card rounded-2xl p-5 flex flex-col gap-4"
             >
               {/* Header */}
               <div className="flex items-center gap-3">
@@ -119,8 +119,8 @@ export default function GoogleTestimonials() {
                   {r.initials}
                 </div>
                 <div className="min-w-0">
-                  <p className="font-semibold text-[14px] text-slate-900 truncate">{r.name}</p>
-                  <p className="text-slate-400 text-[11px] truncate">{r.handle}</p>
+                  <p className="font-semibold text-[14px] text-white truncate">{r.name}</p>
+                  <p className="text-white/40 text-[11px] truncate">{r.handle}</p>
                 </div>
                 <div className="ml-auto shrink-0">
                   <GoogleLogo />
@@ -129,7 +129,7 @@ export default function GoogleTestimonials() {
 
               <StarRating count={r.rating} />
 
-              <p className="text-slate-500 text-[13px] leading-relaxed flex-1">{r.text}</p>
+              <p className="text-white/50 text-[13px] leading-relaxed flex-1">{r.text}</p>
             </motion.div>
           ))}
         </motion.div>

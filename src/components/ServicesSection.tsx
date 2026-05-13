@@ -303,7 +303,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       className="card rounded-2xl overflow-hidden flex flex-col"
     >
       {/* Visual area */}
-      <div className="relative h-44 p-5 bg-slate-50 border-b border-slate-100 overflow-hidden">
+      <div className="relative h-44 p-5 bg-white/5 border-b border-white/10 overflow-hidden">
         {service.visual}
       </div>
 
@@ -312,11 +312,11 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
         <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center mb-4">
           {service.icon}
         </div>
-        <h3 className="font-bold text-[17px] leading-snug mb-2 text-slate-900">{service.title}</h3>
-        <p className="text-slate-500 text-[14px] leading-relaxed flex-1">{service.description}</p>
+        <h3 className="font-bold text-[17px] leading-snug mb-2 text-white">{service.title}</h3>
+        <p className="text-white/50 text-[14px] leading-relaxed flex-1">{service.description}</p>
         <div className="flex flex-wrap gap-1.5 mt-4">
           {service.tags.map((tag) => (
-            <span key={tag} className="text-[10px] px-2.5 py-1 rounded-full font-medium bg-blue-50 text-blue-600 border border-blue-100">
+            <span key={tag} className="text-[10px] px-2.5 py-1 rounded-full font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
               {tag}
             </span>
           ))}
@@ -330,7 +330,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative py-28 px-6 bg-slate-50">
+    <section id="services" className="relative py-28 px-6 bg-[#07090f]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -342,10 +342,10 @@ export default function ServicesSection() {
           <p className="text-blue-500 text-[12px] uppercase tracking-[0.2em] font-semibold mb-3">
             What We Build
           </p>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             Our Services
           </h2>
-          <p className="mt-4 text-slate-500 text-[17px] max-w-lg mx-auto">
+          <p className="mt-4 text-white/50 text-[17px] max-w-lg mx-auto">
             Every service is a piece of a complete growth engine — not isolated tactics.
           </p>
         </motion.div>

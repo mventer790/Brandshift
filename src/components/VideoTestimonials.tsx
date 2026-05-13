@@ -7,28 +7,19 @@ const testimonials = [
   {
     name: "Leo Faclier",
     business: "Faclier Brothers Collective",
-    result: "Real Results",
-    gradient: "from-blue-600 to-blue-400",
+    videoId: "7yU-0lP6G1g",
   },
   {
     name: "Alex Newton",
     business: "Leads Sweeps",
-    result: "Real Results",
-    gradient: "from-blue-700 to-indigo-500",
+    videoId: "5gXP8g0IrXU",
   },
   {
     name: "Leon Brendel",
     business: "GGA Safaris",
-    result: "Real Results",
-    gradient: "from-indigo-600 to-blue-500",
+    videoId: "eGNvMZeJ3yE",
   },
 ];
-
-const PlayIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-    <polygon points="5 3 19 12 5 21 5 3"/>
-  </svg>
-);
 
 const container: Variants = {
   hidden: {},
@@ -41,7 +32,7 @@ const item: Variants = {
 
 export default function VideoTestimonials() {
   return (
-    <section id="testimonials" className="relative py-28 px-6 bg-white">
+    <section id="testimonials" className="relative py-28 px-6 bg-[#07090f]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -51,13 +42,13 @@ export default function VideoTestimonials() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <p className="text-blue-500 text-[12px] uppercase tracking-[0.2em] font-semibold mb-3">
+          <p className="text-blue-400 text-[12px] uppercase tracking-[0.2em] font-semibold mb-3">
             Client Results
           </p>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             Real Businesses. Real Results.
           </h2>
-          <p className="mt-4 text-slate-500 text-[17px] max-w-md mx-auto">
+          <p className="mt-4 text-white/50 text-[17px] max-w-md mx-auto">
             Watch how we transformed their growth.
           </p>
         </motion.div>
@@ -68,47 +59,29 @@ export default function VideoTestimonials() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {testimonials.map((t) => (
             <motion.div
               key={t.name}
               variants={item}
-              whileHover={{ scale: 1.025 }}
-              transition={{ duration: 0.25 }}
-              className="card rounded-2xl overflow-hidden cursor-pointer group"
+              className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-white/5"
             >
-              {/* Thumbnail area */}
-              <div className={`relative h-52 bg-gradient-to-br ${t.gradient} overflow-hidden`}>
-                {/* Subtle screen lines */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center gap-3 opacity-20">
-                  {[1, 0.7, 0.5].map((o, i) => (
-                    <div key={i} className="h-[2px] bg-white rounded-full" style={{ width: `${50 + i * 12}%`, opacity: o }} />
-                  ))}
-                </div>
-
-                {/* Play button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    whileHover={{ scale: 1.12 }}
-                    className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center group-hover:bg-white/30 transition-colors"
-                  >
-                    <div className="translate-x-[1px]">
-                      <PlayIcon />
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Result badge */}
-                <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-3 py-1">
-                  <span className="text-[11px] font-semibold text-white">{t.result}</span>
-                </div>
+              {/* YouTube Short embed — portrait 9:16 */}
+              <div className="relative w-full" style={{ paddingBottom: "177.78%" }}>
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${t.videoId}?rel=0&modestbranding=1`}
+                  title={`${t.name} — ${t.business}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
 
               {/* Info */}
-              <div className="p-5">
-                <p className="font-semibold text-[15px] text-slate-900">{t.name}</p>
-                <p className="text-slate-400 text-[13px] mt-0.5">{t.business}</p>
+              <div className="p-5 border-t border-white/10">
+                <p className="font-semibold text-[15px] text-white">{t.name}</p>
+                <p className="text-white/40 text-[13px] mt-0.5">{t.business}</p>
               </div>
             </motion.div>
           ))}
@@ -128,8 +101,8 @@ export default function VideoTestimonials() {
             { val: "97%", label: "Retention Rate" },
           ].map((s) => (
             <div key={s.label}>
-              <p className="text-3xl sm:text-4xl font-extrabold text-blue-500">{s.val}</p>
-              <p className="text-slate-400 text-[13px] mt-1">{s.label}</p>
+              <p className="text-3xl sm:text-4xl font-extrabold text-blue-400">{s.val}</p>
+              <p className="text-white/40 text-[13px] mt-1">{s.label}</p>
             </div>
           ))}
         </motion.div>

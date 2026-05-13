@@ -38,7 +38,7 @@ const values = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-28 px-6 bg-white">
+    <section id="about" className="relative py-28 px-6 bg-[#07090f]">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: text */}
@@ -47,22 +47,23 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-center lg:text-left"
           >
             <p className="text-blue-500 text-[12px] uppercase tracking-[0.2em] font-semibold mb-4">
               About Us
             </p>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
+            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
               We Build Systems.
               <br />
-              <span className="text-blue-500">Not Excuses.</span>
+              <span className="text-blue-400">Not Excuses.</span>
             </h2>
-            <p className="text-slate-500 text-[16px] sm:text-[17px] leading-relaxed mb-5">
+            <p className="text-white/50 text-[16px] sm:text-[17px] leading-relaxed mb-5">
               Brand Shift Online is a South African digital agency specializing in hands-free lead generation systems
               for businesses locally and worldwide. We help companies grow through high-converting websites,
               Meta &amp; Google Ads, social media management, ecommerce development, AI-powered systems,
               and digital strategy.
             </p>
-            <p className="text-slate-500 text-[16px] sm:text-[17px] leading-relaxed mb-10">
+            <p className="text-white/50 text-[16px] sm:text-[17px] leading-relaxed mb-10">
               Our approach is built around proven industry blueprints designed to attract attention, build trust,
               and convert leads into customers. We focus on creating premium, scalable systems that help
               businesses grow consistently online.
@@ -79,12 +80,12 @@ export default function AboutSection() {
                   transition={{ duration: 0.55, delay: i * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
                     {v.icon}
                   </div>
                   <div>
-                    <p className="font-semibold text-[15px] mb-0.5 text-slate-900">{v.label}</p>
-                    <p className="text-slate-500 text-[13px] leading-relaxed">{v.desc}</p>
+                    <p className="font-semibold text-[15px] mb-0.5 text-white">{v.label}</p>
+                    <p className="text-white/50 text-[13px] leading-relaxed">{v.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -134,7 +135,7 @@ export default function AboutSection() {
                   key={badge.label}
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: badge.delay }}
-                  className={`absolute ${badge.pos} bg-white border border-blue-100 rounded-full px-3 py-1.5 shadow-md`}
+                  className={`absolute ${badge.pos} bg-white/5 border border-white/10 rounded-full px-3 py-1.5 backdrop-blur-sm`}
                 >
                   <span className="text-[11px] font-semibold text-blue-600">{badge.label}</span>
                 </motion.div>

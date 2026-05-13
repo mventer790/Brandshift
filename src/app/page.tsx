@@ -4,7 +4,6 @@ import SystemSection from "@/components/SystemSection";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import ServicesSection from "@/components/ServicesSection";
 import PsychSection from "@/components/PsychSection";
-import FAQSection from "@/components/FAQSection";
 import GoogleTestimonials from "@/components/GoogleTestimonials";
 import AboutSection from "@/components/AboutSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -21,7 +20,6 @@ export default function Home() {
         <VideoTestimonials />
         <ServicesSection />
         <PsychSection />
-        <FAQSection />
         <GoogleTestimonials />
         <AboutSection />
         <FinalCTA />
