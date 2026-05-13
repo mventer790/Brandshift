@@ -111,7 +111,7 @@ export default function GoogleTestimonials() {
 
   return (
     <section className="relative bg-[#07090f] overflow-hidden">
-      <div className="relative pt-16 pb-28">
+      <div className="relative pt-10 sm:pt-16 pb-16 sm:pb-28">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

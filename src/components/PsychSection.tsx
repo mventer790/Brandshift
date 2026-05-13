@@ -25,7 +25,7 @@ const lineVariants = {
 
 export default function PsychSection() {
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative py-16 sm:py-32 px-6 overflow-hidden">
       {/* Dark full-bleed background */}
       <div className="absolute inset-0 bg-slate-900" />
       <div className="absolute inset-0 grid-overlay opacity-60" />

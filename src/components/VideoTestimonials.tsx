@@ -32,7 +32,7 @@ const item: Variants = {
 
 export default function VideoTestimonials() {
   return (
-    <section id="testimonials" className="relative py-28 px-6 bg-[#07090f]">
+    <section id="testimonials" className="relative py-16 sm:py-28 px-6 bg-[#07090f]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div

@@ -330,7 +330,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative py-28 px-6 bg-[#07090f]">
+    <section id="services" className="relative py-16 sm:py-28 px-6 bg-[#07090f]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
