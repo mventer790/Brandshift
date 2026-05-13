@@ -45,15 +45,6 @@ export default function HeroSection() {
             "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(30,80,200,0.18) 0%, rgba(10,30,80,0.08) 50%, transparent 80%)",
         }}
       />
-      {/* Subtle grid */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-      />
 
       {/* Badge */}
       <motion.div
