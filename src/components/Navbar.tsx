@@ -56,10 +56,10 @@ export default function Navbar() {
         {/* CTA — white pill on dark, blue pill on light */}
         <a
           href="#contact"
-          className="flex items-center gap-2 text-[13px] font-semibold px-5 py-2.5 rounded-full bg-white hover:bg-white/90 text-slate-900 transition-all duration-200"
+          className="flex items-center gap-1.5 text-[13px] font-semibold px-4 sm:px-5 py-2.5 rounded-full bg-white hover:bg-white/90 text-slate-900 transition-all duration-200 whitespace-nowrap"
         >
           Book A Call
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <svg className="hidden sm:block" width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2.5 6h7M7 3.5L9.5 6 7 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </a>
