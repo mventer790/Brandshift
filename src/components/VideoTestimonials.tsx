@@ -5,9 +5,9 @@ import type { Variants } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Leo Faclier",
-    business: "Faclier Brothers Collective",
-    videoId: "7yU-0lP6G1g",
+    name: "Leon Brendel",
+    business: "GGA Safaris",
+    videoId: "eGNvMZeJ3yE",
   },
   {
     name: "Alex Newton",
@@ -15,9 +15,9 @@ const testimonials = [
     videoId: "5gXP8g0IrXU",
   },
   {
-    name: "Leon Brendel",
-    business: "GGA Safaris",
-    videoId: "eGNvMZeJ3yE",
+    name: "Leo Faclier",
+    business: "Faclier Brothers Collective",
+    videoId: "7yU-0lP6G1g",
   },
 ];
 
