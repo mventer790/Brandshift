@@ -54,6 +54,14 @@ export default function Footer() {
               {l}
             </a>
           ))}
+          <a
+            href="https://share.google/Y6hDEW9vtowx58dN2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/30 hover:text-white/70 text-[13px] transition-colors"
+          >
+            Google Reviews
+          </a>
         </motion.div>
       </div>
     </footer>

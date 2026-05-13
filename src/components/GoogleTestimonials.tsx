@@ -133,6 +133,28 @@ export default function GoogleTestimonials() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Link to Google Business profile */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-10 text-center"
+        >
+          <a
+            href="https://share.google/Y6hDEW9vtowx58dN2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 border border-white/10 bg-white/5 hover:bg-white/10 text-white/70 hover:text-white text-[14px] font-medium px-6 py-3 rounded-full transition-all duration-200"
+          >
+            <GoogleLogo />
+            See all reviews on Google
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2.5 6h7M7 3.5L9.5 6 7 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );
