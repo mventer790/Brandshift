@@ -77,11 +77,8 @@ export default function VideoTestimonials() {
                   allowFullScreen
                   style={{ border: 0, display: "block" }}
                 />
-                {/* Cover YouTube's title/channel overlay in top-left */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-14 pointer-events-none"
-                  style={{ background: "linear-gradient(to bottom, #000 0%, transparent 100%)" }}
-                />
+                {/* Cover YouTube's title/channel overlay */}
+                <div className="absolute top-0 left-0 right-0 h-12 bg-black pointer-events-none z-10" />
               </div>
             </motion.div>
           ))}

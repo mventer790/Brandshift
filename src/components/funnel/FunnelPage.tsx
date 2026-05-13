@@ -192,10 +192,7 @@ export default function FunnelPage() {
                     allowFullScreen
                     style={{ border: 0, display: "block" }}
                   />
-                  <div
-                    className="absolute top-0 left-0 right-0 h-14 pointer-events-none"
-                    style={{ background: "linear-gradient(to bottom, #000 0%, transparent 100%)" }}
-                  />
+                  <div className="absolute top-0 left-0 right-0 h-12 bg-black pointer-events-none z-10" />
                 </div>
               </motion.div>
             ))}
