@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="relative py-16 sm:py-32 px-6 overflow-hidden bg-slate-900">
+    <section id="contact" className="relative py-16 sm:py-32 px-6 overflow-hidden bg-[#07090f]">
       {/* Radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
