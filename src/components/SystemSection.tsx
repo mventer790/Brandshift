@@ -77,7 +77,7 @@ export default function SystemSection() {
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
             The Proven Growth System
           </h2>
-          <p className="mt-4 text-white/50 text-[17px] max-w-lg mx-auto leading-relaxed">
+          <p className="mt-4 text-white/80 text-[17px] max-w-lg mx-auto leading-relaxed">
             Three interconnected layers — each one amplifying the next.
           </p>
         </motion.div>
@@ -117,7 +117,7 @@ export default function SystemSection() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold mb-3 text-white">{step.label}</h3>
-              <p className="text-white/50 text-[15px] leading-relaxed mb-6">{step.description}</p>
+              <p className="text-white/80 text-[15px] leading-relaxed mb-6">{step.description}</p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2">

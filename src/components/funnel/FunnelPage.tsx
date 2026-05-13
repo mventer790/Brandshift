@@ -186,16 +186,12 @@ export default function FunnelPage() {
                 <div className="w-full" style={{ aspectRatio: "9/16" }}>
                   <iframe
                     width="100%" height="100%"
-                    src={`https://www.youtube.com/embed/${v.id}?rel=0`}
+                    src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
                     title={v.name}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     style={{ border: 0, display: "block" }}
                   />
-                </div>
-                <div className="p-4 bg-white/5">
-                  <p className="font-semibold text-white text-[14px]">{v.name}</p>
-                  <p className="text-white/40 text-[12px]">{v.biz}</p>
                 </div>
               </motion.div>
             ))}
