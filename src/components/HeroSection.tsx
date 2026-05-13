@@ -74,9 +74,9 @@ function PulsingCTA() {
 
   const cursorVariants = {
     idle:     { x: 90, y: 30, opacity: 0, scale: 1 },
-    moving:   { x: 10, y: 8,  opacity: 1, scale: 1,   transition: { duration: 0.7, ease: "easeOut" } },
+    moving:   { x: 10, y: 8,  opacity: 1, scale: 1,    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] } },
     clicking: { x: 10, y: 8,  opacity: 1, scale: 0.85, transition: { duration: 0.15 } },
-    lifting:  { x: 30, y: -10, opacity: 0, scale: 1,   transition: { duration: 0.35, ease: "easeIn" } },
+    lifting:  { x: 30, y: -10, opacity: 0, scale: 1,   transition: { duration: 0.35, ease: [0.4, 0, 1, 1] } },
   };
 
   return (
