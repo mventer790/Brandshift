@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const services = [
   {
@@ -13,7 +14,7 @@ const services = [
         <path d="M3 9h18M9 21V9"/>
       </svg>
     ),
-    visual: <WebsiteMockup />,
+    visual: <ServiceImage src="/Screenshot 2026-05-09 at 15.13.22.png" alt="Website Design" />,
     tags: ["UI/UX Design", "CRO", "SEO-Ready"],
   },
   {
@@ -26,7 +27,7 @@ const services = [
         <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
       </svg>
     ),
-    visual: <EcommerceMockup />,
+    visual: <ServiceImage src="/Screenshot 2026-05-09 at 15.17.48.png" alt="Ecommerce Design" />,
     tags: ["Shopify", "Custom Checkout", "Mobile-First"],
   },
   {
@@ -38,7 +39,7 @@ const services = [
         <path d="M3 11l19-9-9 19-2-8-8-2z"/>
       </svg>
     ),
-    visual: <StatsMockup platform="Meta" />,
+    visual: <ServiceImage src="/desktop_meta_ads_dashboard.png" alt="Meta Ads Dashboard" />,
     tags: ["Lead Gen", "Retargeting", "Creative Strategy"],
   },
   {
@@ -51,7 +52,7 @@ const services = [
         <path d="M21 21l-4.35-4.35"/>
       </svg>
     ),
-    visual: <StatsMockup platform="Google" />,
+    visual: <ServiceImage src="/Screenshot 2026-05-09 at 15.14.03.png" alt="Google Ads Dashboard" />,
     tags: ["Search Ads", "Performance Max", "Conversion Tracking"],
   },
   {
@@ -112,6 +113,20 @@ const services = [
 ];
 
 /* ─── Visual mockups ──────────────────────────────────────── */
+
+function ServiceImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="w-full h-full relative overflow-hidden">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover object-top"
+        sizes="(max-width: 768px) 100vw, 25vw"
+      />
+    </div>
+  );
+}
 
 function WebsiteMockup() {
   return (

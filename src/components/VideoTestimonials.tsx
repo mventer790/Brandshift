@@ -7,17 +7,17 @@ const testimonials = [
   {
     name: "Leon Brendel",
     business: "GGA Safaris",
-    videoId: "7yU-0lP6G1g",
+    src: "/0506(2).mov",
   },
   {
     name: "Alex Newton",
     business: "Leads Sweeps",
-    videoId: "5gXP8g0IrXU",
+    src: "/0506(1).mov",
   },
   {
     name: "Leo Faclier",
     business: "Faclier Brothers Collective",
-    videoId: "eGNvMZeJ3yE",
+    src: "/0506.mov",
   },
 ];
 
@@ -65,17 +65,16 @@ export default function VideoTestimonials() {
             <motion.div
               key={t.name}
               variants={item}
-              className="rounded-2xl overflow-hidden border border-white/10"
+              className="rounded-2xl overflow-hidden border border-white/10 bg-white/5"
             >
               <div className="w-full" style={{ aspectRatio: "9/16" }}>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${t.videoId}?rel=0`}
-                  title={t.name}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  style={{ border: 0, display: "block" }}
+                <video
+                  src={t.src}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                  style={{ display: "block" }}
                 />
               </div>
             </motion.div>
@@ -97,7 +96,7 @@ export default function VideoTestimonials() {
           ].map((s) => (
             <div key={s.label}>
               <p className="text-3xl sm:text-4xl font-extrabold text-blue-400">{s.val}</p>
-              <p className="text-white/40 text-[13px] mt-1">{s.label}</p>
+              <p className="text-white text-[13px] mt-1">{s.label}</p>
             </div>
           ))}
         </motion.div>
