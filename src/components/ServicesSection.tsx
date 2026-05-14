@@ -64,7 +64,7 @@ const services = [
         <path d="M21 2H3v16h5v4l4-4h9V2z"/>
       </svg>
     ),
-    visual: <SocialMockup />,
+    visual: <ServiceImage src="/social-media-screenshot.jpg" alt="Social Media Management" />,
     tags: ["Content Calendar", "Instagram", "LinkedIn"],
   },
   {
@@ -77,7 +77,7 @@ const services = [
         <path d="M12 8v4l3 3"/>
       </svg>
     ),
-    visual: <DesignMockup />,
+    visual: <ServiceImage src="/digital-design-screenshot.jpg" alt="Digital Design" />,
     tags: ["Brand Identity", "Graphics", "Motion"],
   },
   {
@@ -92,7 +92,7 @@ const services = [
         <line x1="6" y1="18" x2="6.01" y2="18"/>
       </svg>
     ),
-    visual: <ServerMockup />,
+    visual: <ServiceImage src="/servers_hosting_website_image.png" alt="Hosting & Infrastructure" />,
     tags: ["99.9% Uptime", "CDN", "SSL"],
   },
   {
@@ -107,7 +107,7 @@ const services = [
         <rect x="13" y="13" width="9" height="9"/>
       </svg>
     ),
-    visual: <MicrosoftMockup />,
+    visual: <ServiceImage src="/microsoft_services_website_image_logo_prominent.png" alt="Microsoft Solutions" />,
     tags: ["Microsoft 365", "Azure", "Teams Setup"],
   },
 ];
