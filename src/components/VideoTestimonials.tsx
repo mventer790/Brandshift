@@ -2,6 +2,29 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+function VideoCard({ src }: { src: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    v.currentTime = 0.5;
+  }, []);
+
+  return (
+    <video
+      ref={ref}
+      src={src}
+      controls
+      playsInline
+      preload="metadata"
+      className="w-full h-full object-cover"
+      style={{ display: "block" }}
+    />
+  );
+}
 
 const testimonials = [
   {
@@ -68,14 +91,7 @@ export default function VideoTestimonials() {
               className="rounded-2xl overflow-hidden border border-white/10 bg-white/5"
             >
               <div className="w-full" style={{ aspectRatio: "9/16" }}>
-                <video
-                  src={t.src}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                  style={{ display: "block" }}
-                />
+                <VideoCard src={t.src} />
               </div>
             </motion.div>
           ))}
