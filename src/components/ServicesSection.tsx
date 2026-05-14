@@ -14,7 +14,7 @@ const services = [
         <path d="M3 9h18M9 21V9"/>
       </svg>
     ),
-    visual: <ServiceImage src="/Screenshot 2026-05-09 at 15.13.22.png" alt="Website Design" />,
+    visual: <ServiceImage src="/website-screenshot.png" alt="Website Design" />,
     tags: ["UI/UX Design", "CRO", "SEO-Ready"],
   },
   {
@@ -27,7 +27,7 @@ const services = [
         <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
       </svg>
     ),
-    visual: <ServiceImage src="/Screenshot 2026-05-09 at 15.17.48.png" alt="Ecommerce Design" />,
+    visual: <ServiceImage src="/ecommerce-screenshot.png" alt="Ecommerce Design" />,
     tags: ["Shopify", "Custom Checkout", "Mobile-First"],
   },
   {
@@ -52,7 +52,7 @@ const services = [
         <path d="M21 21l-4.35-4.35"/>
       </svg>
     ),
-    visual: <ServiceImage src="/Screenshot 2026-05-09 at 15.14.03.png" alt="Google Ads Dashboard" />,
+    visual: <ServiceImage src="/google-ads-screenshot.png" alt="Google Ads Dashboard" />,
     tags: ["Search Ads", "Performance Max", "Conversion Tracking"],
   },
   {
@@ -116,15 +116,13 @@ const services = [
 
 function ServiceImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="w-full h-full relative overflow-hidden">
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        className="object-cover object-top"
-        sizes="(max-width: 768px) 100vw, 25vw"
-      />
-    </div>
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className="object-cover object-top"
+      sizes="(max-width: 768px) 100vw, 25vw"
+    />
   );
 }
 
@@ -318,7 +316,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       className="card rounded-2xl overflow-hidden flex flex-col"
     >
       {/* Visual area */}
-      <div className="relative h-44 p-5 bg-white/5 border-b border-white/10 overflow-hidden">
+      <div className="relative h-44 bg-white/5 border-b border-white/10 overflow-hidden">
         {service.visual}
       </div>
 
