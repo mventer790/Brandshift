@@ -132,25 +132,25 @@ export default function PsychSection() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.65, delay: s.delay, ease: "easeOut" }}
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center gap-2 cursor-default"
+              whileHover={{ scale: 1.03 }}
+              className="flex flex-col items-center gap-3 cursor-default"
             >
               <div
-                className="w-full py-5 px-3 rounded-xl glass flex flex-col items-center gap-2"
+                className="w-full py-7 px-4 rounded-2xl flex flex-col items-center gap-3 bg-blue-500/15"
                 style={{
-                  border: "1px solid rgba(59,130,246,0.25)",
-                  boxShadow: "0 0 30px rgba(59,130,246,0.08)",
+                  border: "1.5px solid rgba(59,130,246,0.6)",
+                  boxShadow: "0 0 40px rgba(59,130,246,0.2), inset 0 0 30px rgba(59,130,246,0.05)",
                 }}
               >
                 <div
-                  className="w-2 h-2 rounded-full bg-blue-500"
-                  style={{ boxShadow: "0 0 10px rgba(59,130,246,0.8)" }}
+                  className="w-2.5 h-2.5 rounded-full bg-blue-400"
+                  style={{ boxShadow: "0 0 12px rgba(96,165,250,1), 0 0 24px rgba(96,165,250,0.5)" }}
                 />
-                <p className="text-[12px] sm:text-[13px] font-extrabold tracking-[0.15em] sm:tracking-[0.2em] text-blue-400 glow-word text-center">
+                <p className="text-[13px] sm:text-[16px] font-black tracking-[0.12em] sm:tracking-[0.18em] text-white text-center uppercase">
                   {s.word}
                 </p>
               </div>
-              <p className="text-[11px] text-white text-center leading-snug px-1 hidden sm:block">
+              <p className="text-[12px] sm:text-[13px] text-white text-center leading-snug px-1 hidden sm:block">
                 {s.desc}
               </p>
             </motion.div>
