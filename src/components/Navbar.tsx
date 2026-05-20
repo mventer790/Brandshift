@@ -9,7 +9,7 @@ const links = [
   { label: "About", href: "#about" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ hideCta }: { hideCta?: boolean } = {}) {
 
   return (
     <motion.header
@@ -18,7 +18,7 @@ export default function Navbar() {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className="absolute top-0 inset-x-0 z-50 bg-transparent"
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-8 h-12 sm:h-16 flex items-center justify-between gap-2">
+      <div className={`max-w-7xl mx-auto px-3 sm:px-8 h-12 sm:h-16 flex items-center gap-2 ${hideCta ? "justify-center md:justify-between" : "justify-between"}`}>
         {/* Logo */}
         <a href="#" className="shrink-0">
           <span className="font-extrabold text-[21px] sm:text-[22px] tracking-tight uppercase text-white">
@@ -40,15 +40,17 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <a
-          href="#contact"
-          className="btn-beat flex items-center gap-1 text-[14px] font-semibold px-5 sm:px-5 py-2.5 sm:py-2.5 rounded-full whitespace-nowrap"
-        >
-          Book A Call
-          <svg className="hidden sm:block" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M2.5 6h7M7 3.5L9.5 6 7 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </a>
+        {!hideCta && (
+          <a
+            href="#contact"
+            className="btn-beat flex items-center gap-1 text-[14px] font-semibold px-5 sm:px-5 py-2.5 sm:py-2.5 rounded-full whitespace-nowrap"
+          >
+            Book A Call
+            <svg className="hidden sm:block" width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2.5 6h7M7 3.5L9.5 6 7 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+        )}
       </div>
     </motion.header>
   );
