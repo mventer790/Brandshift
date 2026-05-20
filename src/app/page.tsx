@@ -13,7 +13,7 @@ import MobileCTA from "@/components/MobileCTA";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar hideCta />
       <main>
         <HeroSection />
         <VideoTestimonials />

@@ -164,16 +164,6 @@ export default function HeroSection() {
         and convert leads into customers — automatically.
       </motion.p>
 
-      {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.55 }}
-        className="mt-9"
-      >
-        <PulsingCTA />
-      </motion.div>
-
       {/* Platform logos */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

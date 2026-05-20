@@ -9,7 +9,7 @@ import GoogleTestimonials from "@/components/GoogleTestimonials";
 // ─── Typeform Embed ────────────────────────────────────────────
 // Replace TYPEFORM_URL_HERE with your actual Typeform URL
 // e.g. https://yourname.typeform.com/to/XXXXXXXX
-const TYPEFORM_URL = "TYPEFORM_URL_HERE";
+const TYPEFORM_URL = "https://form.typeform.com/to/Hf1dLjfi";
 
 function TypeformSection({ id, isFirst = false }: { id: string; isFirst?: boolean }) {
   const isPlaceholder = TYPEFORM_URL === "TYPEFORM_URL_HERE";
