@@ -8,7 +8,7 @@ import GoogleTestimonials from "@/components/GoogleTestimonials";
 
 // ─── Typeform ──────────────────────────────────────────────────
 // Replace TYPEFORM_URL_HERE with your actual Typeform URL
-const TYPEFORM_URL = "https://form.typeform.com/to/EDOIY5op";
+const TYPEFORM_URL = "https://form.typeform.com/to/Hf1dLjfi";
 
 // ─── AI Features Section ───────────────────────────────────────
 const features = [
@@ -168,7 +168,7 @@ function HeroSection() {
 
 // ─── Typeform ──────────────────────────────────────────────────
 function TypeformSection({ id, isFirst = false }: { id: string; isFirst?: boolean }) {
-  const isPlaceholder = TYPEFORM_URL === "TYPEFORM_URL_HERE";
+  const isPlaceholder = false;
 
   return (
     <section
@@ -202,10 +202,10 @@ function TypeformSection({ id, isFirst = false }: { id: string; isFirst?: boolea
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="rounded-2xl overflow-hidden border border-white/10"
-          style={{ minHeight: 360 }}
+          style={{ minHeight: 500 }}
         >
           {isPlaceholder ? (
-            <div className="flex flex-col items-center justify-center gap-4 bg-white/5 h-full min-h-[360px] text-center px-8">
+            <div className="flex flex-col items-center justify-center gap-4 bg-white/5 h-full min-h-[500px] text-center px-8">
               <div className="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2"/>
@@ -221,9 +221,9 @@ function TypeformSection({ id, isFirst = false }: { id: string; isFirst?: boolea
             </div>
           ) : (
             <iframe
-              src={`${TYPEFORM_URL}?embed-hide-footer=true&embed-hide-headers=true`}
+              src={TYPEFORM_URL}
               width="100%"
-              height="400"
+              height="500"
               frameBorder="0"
               allow="camera; microphone; autoplay; encrypted-media;"
               style={{ border: 0, display: "block" }}
