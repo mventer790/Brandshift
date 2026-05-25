@@ -171,12 +171,12 @@ export default function FunnelPage() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { id: "7yU-0lP6G1g", name: "Leon Brendel", biz: "GGA Safaris" },
-              { id: "5gXP8g0IrXU", name: "Alex Newton", biz: "Leads Sweeps" },
-              { id: "eGNvMZeJ3yE", name: "Leo Faclier", biz: "Faclier Brothers Collective" },
+              { id: "7yU-0lP6G1g", name: "Leon Brendel" },
+              { id: null, src: "/0506 copy.mov", name: "Testimonial 2" },
+              { id: "eGNvMZeJ3yE", name: "Leo Faclier" },
             ].map((v, i) => (
               <motion.div
-                key={v.id}
+                key={v.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -184,15 +184,28 @@ export default function FunnelPage() {
                 className="rounded-2xl overflow-hidden border border-white/10"
               >
                 <div className="relative w-full" style={{ aspectRatio: "9/16" }}>
-                  <iframe
-                    width="100%" height="100%"
-                    src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
-                    title={v.name}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ border: 0, display: "block" }}
-                  />
-                  <div className="absolute top-0 left-0 right-0 h-12 bg-black pointer-events-none z-10" />
+                  {v.src ? (
+                    <video
+                      src={v.src}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-full object-cover"
+                      style={{ display: "block" }}
+                    />
+                  ) : (
+                    <>
+                      <iframe
+                        width="100%" height="100%"
+                        src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1`}
+                        title={v.name}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        style={{ border: 0, display: "block" }}
+                      />
+                      <div className="absolute top-0 left-0 right-0 h-12 bg-black pointer-events-none z-10" />
+                    </>
+                  )}
                 </div>
               </motion.div>
             ))}
