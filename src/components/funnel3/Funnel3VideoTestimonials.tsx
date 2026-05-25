@@ -27,9 +27,9 @@ function VideoCard({ src }: { src: string }) {
 }
 
 const testimonials = [
-  { name: "Leon", src: "/LEON.mov" },
-  { name: "Jordy", src: "/jordy.mov" },
-  { name: "Lloyd", src: "/lloyd.mov" },
+  { name: "Leon", src: "/LEON-2-2.mov" },
+  { name: "Jordy", src: "/jordy1-2.mov" },
+  { name: "Lloyd", src: "/lloyd-2.mov" },
 ];
 
 const container: Variants = {
