@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import VideoTestimonials from "@/components/VideoTestimonials";
+import Funnel3VideoTestimonials from "@/components/funnel3/Funnel3VideoTestimonials";
 import GoogleTestimonials from "@/components/GoogleTestimonials";
 
 // ─── Typeform ──────────────────────────────────────────────────
@@ -259,7 +259,7 @@ export default function Funnel3Page() {
         <TypeformSection id="contact" isFirst />
 
         {/* 3. Video testimonials */}
-        <VideoTestimonials />
+        <Funnel3VideoTestimonials />
 
         {/* 4. AI Features */}
         <AIFeaturesSection />
