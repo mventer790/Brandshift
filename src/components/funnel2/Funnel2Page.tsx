@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import VideoTestimonials from "@/components/VideoTestimonials";
+import Funnel2VideoTestimonials from "@/components/funnel2/Funnel2VideoTestimonials";
 import SystemSection from "@/components/SystemSection";
 import GoogleTestimonials from "@/components/GoogleTestimonials";
 
@@ -117,7 +117,7 @@ export default function Funnel2Page() {
         <TypeformSection id="contact" isFirst />
 
         {/* 3. Video testimonials */}
-        <VideoTestimonials />
+        <Funnel2VideoTestimonials />
 
         {/* 4. The Proven System */}
         <SystemSection />
