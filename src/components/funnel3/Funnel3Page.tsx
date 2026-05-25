@@ -147,7 +147,7 @@ function HeroSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-5xl sm:text-6xl lg:text-[76px] font-extrabold leading-[1.1] tracking-tight"
         >
-          <span className="text-white block">We build the best AI bots</span>
+          <span className="text-white block">We build the best AI agents</span>
           <span className="block mt-1 text-blue-400">in Town.</span>
         </motion.h1>
 
