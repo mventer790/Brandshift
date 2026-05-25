@@ -8,7 +8,7 @@ import GoogleTestimonials from "@/components/GoogleTestimonials";
 
 // ─── Typeform ──────────────────────────────────────────────────
 // Replace TYPEFORM_URL_HERE with your actual Typeform URL
-const TYPEFORM_URL = "https://form.typeform.com/to/Hf1dLjfi";
+const TYPEFORM_URL = "https://form.typeform.com/to/EDOIY5op";
 
 // ─── AI Features Section ───────────────────────────────────────
 const features = [
