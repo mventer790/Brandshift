@@ -33,14 +33,14 @@ const testimonials = [
     src: "/0506(2).mov",
   },
   {
-    name: "Alex Newton",
-    business: "Leads Sweeps",
-    src: "/0506(1).mov",
+    name: "Testimonial 2",
+    business: "",
+    src: "/0506 copy.mov",
   },
   {
-    name: "Leo Faclier",
-    business: "Faclier Brothers Collective",
-    src: "/0506.mov",
+    name: "Testimonial 3",
+    business: "",
+    src: "/0506(1).mov",
   },
 ];
 
