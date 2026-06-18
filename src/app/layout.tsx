@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   title: "Brandshift — Hands-Free Lead Generation Systems",
   description:
     "We build complete acquisition systems that bring attention, build trust, and convert leads into customers automatically.",
+  openGraph: {
+    title: "Brandshift — Hands-Free Lead Generation Systems",
+    description:
+      "We build complete acquisition systems that bring attention, build trust, and convert leads into customers automatically.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brandshift — Hands-Free Lead Generation Systems",
+    description:
+      "We build complete acquisition systems that bring attention, build trust, and convert leads into customers automatically.",
+  },
 };
 
 export const viewport: Viewport = {
