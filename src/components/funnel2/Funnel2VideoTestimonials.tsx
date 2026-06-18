@@ -88,7 +88,7 @@ export default function Funnel2VideoTestimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-14 grid grid-cols-3 gap-6 max-w-2xl mx-auto text-center"
+          className="mt-14 grid grid-cols-3 gap-6 max-w-3xl mx-auto text-center"
         >
           {[
             { val: "150+", label: "Clients Served" },
@@ -96,8 +96,8 @@ export default function Funnel2VideoTestimonials() {
             { val: "97%", label: "Retention Rate" },
           ].map((s) => (
             <div key={s.label}>
-              <p className="text-3xl sm:text-4xl font-extrabold text-blue-400">{s.val}</p>
-              <p className="text-white text-[13px] mt-1">{s.label}</p>
+              <p className="text-4xl sm:text-5xl font-extrabold text-blue-400">{s.val}</p>
+              <p className="text-white text-[15px] sm:text-base mt-1">{s.label}</p>
             </div>
           ))}
         </motion.div>

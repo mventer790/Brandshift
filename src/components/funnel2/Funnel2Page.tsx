@@ -31,6 +31,10 @@ function TypeformSection({ id, isFirst = false }: { id: string; isFirst?: boolea
         >
           {isFirst ? (
             <>
+              <div className="mb-4 inline-flex items-center gap-2 border border-white/10 bg-white/5 backdrop-blur-sm rounded-full px-5 py-2 text-[13px] text-white/70 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                Trusted by 100+ leading brands
+              </div>
               <h2 className="text-5xl sm:text-6xl lg:text-[76px] font-extrabold leading-[1.1] tracking-tight">
                 <span className="text-white block">We specialize in getting</span>
                 <span className="block mt-1">
