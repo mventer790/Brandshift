@@ -29,7 +29,7 @@ function VideoCard({ src }: { src: string }) {
 const testimonials = [
   { name: "Leon", src: "/LEON-2-2.mp4" },
   { name: "Jordy", src: "/jordy1-2.mp4" },
-  { name: "Lloyd", src: "/lloyd-2.mp4" },
+  { name: "Lloyd", src: "/lloyd-3.mp4" },
 ];
 
 const container: Variants = {
